@@ -8,17 +8,22 @@ H5P.TextSequencing = (function (EventDispatcher: any, $: JQuery) {
    * @param {number} contentId         unique id given by the platform
    *
    */
-  const TextSequencing = (options: any, id: number) => {
+  const TextSequencing = (params: any, id: number) => {
     // Extend defaults with provided options
   };
+
   /**
-   * Attach this game's html to the given container.
+   * Attach content HTML to the main H5P container
    *
    *  @param {H5P.jQuery} $container
    */
   TextSequencing.prototype.attach = ($container: JQuery) => {
     $container.append("<p>Anus</>");
   };
+
+  // Extends the event dispatcher
+  TextSequencing.prototype = Object.create(EventDispatcher.prototype);
+  TextSequencing.prototype.constructor = TextSequencing;
   return TextSequencing;
 })(H5P.EventDispatcher, H5P.jQuery);
 
