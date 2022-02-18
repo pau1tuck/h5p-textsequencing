@@ -20,6 +20,7 @@
  */
 declare namespace H5P {
   let TextSequencing: any;
+  let JoubelUI: any;
   /**
    * The base of the event system.
    * Inherit this class if you want your H5P to dispatch events.
