@@ -15,7 +15,7 @@
   },
   "preloadedJs": [
     {
-      "path": "dist/h5p-sequencing.js"
+      "path": "dist/h5p-textsequencing.js"
     }
   ]
 }

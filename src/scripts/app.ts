@@ -1,6 +1,4 @@
 /* eslint-disable func-names */
-export {};
-
 H5P.TextSequencing = (function (EventDispatcher: any, $: JQuery) {
   /**
    * TextSequencing - Constructor
@@ -10,15 +8,18 @@ H5P.TextSequencing = (function (EventDispatcher: any, $: JQuery) {
    * @param {number} contentId         unique id given by the platform
    *
    */
-  const textSequencing = (params: any, contentId: number) => {
-    /**
-     * Attach this game's html to the given container.
-     *
-     *  @param {H5P.jQuery} $container
-     */
-    this.attach = ($container: JQuery) => {
-      $container.get(0)?.append("<p>Anus</>");
-    };
+  const TextSequencing = (options: any, id: number) => {
+    // Extend defaults with provided options
   };
-  return textSequencing;
+  /**
+   * Attach this game's html to the given container.
+   *
+   *  @param {H5P.jQuery} $container
+   */
+  TextSequencing.prototype.attach = ($container: JQuery) => {
+    $container.append("<p>Anus</>");
+  };
+  return TextSequencing;
 })(H5P.EventDispatcher, H5P.jQuery);
+
+export {};
