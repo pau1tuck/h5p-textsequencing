@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack NODE_ENV='development' webpack --mode=development --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cross-env NODE_ENV='production' webpack --mode=production && cp library.json ./package/H5P.Page/ && cp semantics.json ./package/H5P.Page/ && cp ./dist/* ./package/H5P.Page/dist/ && rm ./package/page.h5p && cd package && zip -r -D -X page.h5p *"
+    "build": "cross-env NODE_ENV='production' webpack --mode=production && cp library.json ./package/H5P.TextSequencing/ && cp semantics.json ./package/H5P.TextSequencing/ && cp ./dist/* ./package/H5P.TextSequencing/dist/ && rm ./package/textsequencing.h5p && cd package && zip -r -D -X textsequencing.h5p *"
   },
   "repository": {
     "type": "git",

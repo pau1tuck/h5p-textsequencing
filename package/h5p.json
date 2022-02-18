@@ -1,5 +1,5 @@
 {
-  "title": "Page",
+  "title": "Text Sequencing",
   "language": "en",
   "author": "Paul Tuck @pau1tuck",
   "license": "CC BY-SA",
@@ -12,12 +12,12 @@
   ],
   "preloadedDependencies": [
     {
-      "machineName": "H5P.Page",
+      "machineName": "H5P.TextSequencing",
       "majorVersion": 1,
       "minorVersion": 0
     }
   ],
-  "mainLibrary": "H5P.Page",
-  "machineName": "H5P.Page",
+  "mainLibrary": "H5P.TextSequencing",
+  "machineName": "H5P.TextSequencing",
   "embedTypes": ["div"]
 }

@@ -1,7 +1,7 @@
 {
-  "title": "Page",
+  "title": "Text Sequencing",
   "description": "A single page that can display various content types",
-  "machineName": "H5P.Page",
+  "machineName": "H5P.TextSequencing",
   "majorVersion": 1,
   "minorVersion": 0,
   "patchVersion": 1,
@@ -15,7 +15,7 @@
   },
   "preloadedJs": [
     {
-      "path": "dist/h5p-page.js"
+      "path": "dist/h5p-sequencing.js"
     }
   ]
 }

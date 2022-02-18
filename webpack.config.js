@@ -13,7 +13,7 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "h5p-hello-world.css",
+      filename: "h5p-textsequencing.css",
     }),
     new MinifyPlugin(
       {},
@@ -23,10 +23,10 @@ const config = {
     ),
   ],
   entry: {
-    dist: "./src/entries/main.ts",
+    dist: "./src/scripts/app.ts",
   },
   output: {
-    filename: "h5p-page.js",
+    filename: "h5p-textsequencing.js",
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
