@@ -1,4 +1,5 @@
 webpack.config.js
+global.d.ts
 bkp.ts
 dist/
 package/

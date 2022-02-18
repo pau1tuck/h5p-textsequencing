@@ -19,7 +19,7 @@
  * H5P but only added for the typings.
  */
 declare namespace H5P {
-  var Page: any;
+  let TextSequencing: any;
   /**
    * The base of the event system.
    * Inherit this class if you want your H5P to dispatch events.
@@ -71,7 +71,7 @@ declare namespace H5P {
     triggerXAPICompleted(
       score: number,
       maxScore: number,
-      success: boolean
+      success: boolean,
     ): void;
 
     /**
@@ -93,7 +93,7 @@ declare namespace H5P {
       maxScore: number,
       verb: string,
       completion: boolean,
-      success: boolean
+      success: boolean,
     ): void;
 
     /**
@@ -149,7 +149,7 @@ declare namespace H5P {
     trigger(
       event: string | Event,
       eventData?: any,
-      extras?: { bubbles?: boolean; external?: boolean }
+      extras?: { bubbles?: boolean; external?: boolean },
     ): void;
 
     attach?(wrapper: JQuery): void;
@@ -189,7 +189,7 @@ declare namespace H5P {
     displayToastMessage(
       msg: string,
       forceShow?: boolean,
-      configOverride?: any
+      configOverride?: any,
     ): void;
 
     /**
@@ -318,7 +318,7 @@ declare namespace H5P {
       maxScore: number,
       instance: IH5PInstance,
       completion: boolean,
-      success: boolean
+      success: boolean,
     ): void;
 
     /**
@@ -382,7 +382,7 @@ declare namespace H5P {
     constructor(
       parameters: any,
       genericProperty?: string,
-      specificKey?: string
+      specificKey?: string,
     );
   }
 
@@ -609,7 +609,7 @@ declare namespace H5P {
     constructor(
       type: string,
       data: any,
-      extras?: { bubbles: boolean; external: boolean }
+      extras?: { bubbles: boolean; external: boolean },
     );
     type: string;
     data: any;
@@ -670,7 +670,7 @@ declare namespace H5P {
       copyright: { [field: string]: string },
       labels?: { [field: string]: string },
       order?: string[],
-      extraFields?: { [field: string]: string }
+      extraFields?: { [field: string]: string },
     );
 
     setThumbnail(newThumbnail: Thumbnail): void;
@@ -769,7 +769,7 @@ declare namespace H5P {
         noOverflowY?: boolean;
         overflowReference?: any;
       };
-    }
+    },
   ): any;
 
   function buildMetadataCopyrights(metadata: ILicenseData): MediaCopyright;
@@ -841,7 +841,7 @@ declare namespace H5P {
   function deleteUserData(
     contentId: string | number,
     dataId: string,
-    subContentId?: string
+    subContentId?: string,
   ): void;
 
   /**
@@ -869,7 +869,7 @@ declare namespace H5P {
     info: ContentCopyrights,
     parameters: any | any[],
     contentId: number | string,
-    extras?: { metadata: any; machineName: string }
+    extras?: { metadata: any; machineName: string },
   ): void;
 
   /**
@@ -886,7 +886,7 @@ declare namespace H5P {
     instance: IH5PInstance,
     exitCallback: () => void,
     body: JQuery,
-    forceSemiFullScreen: boolean
+    forceSemiFullScreen: boolean,
   ): void;
 
   /**
@@ -936,7 +936,7 @@ declare namespace H5P {
     instance: IH5PInstance,
     parameters: any,
     contentId: string | number,
-    metadata: ILicenseData
+    metadata: ILicenseData,
   ): string;
 
   /**
@@ -1001,7 +1001,7 @@ declare namespace H5P {
     contentId: number | string,
     dataId: string,
     done: (error?: any, data?: any) => void,
-    subContentId?: string
+    subContentId?: string,
   ): void;
 
   /**
@@ -1064,7 +1064,7 @@ declare namespace H5P {
     contentId: string | number,
     $attachTo?: JQuery,
     skipResize?: boolean,
-    extras?: { standalone?: boolean; parent?: any; [key: string]: any }
+    extras?: { standalone?: boolean; parent?: any; [key: string]: any },
   ): IH5PInstance;
 
   /**
@@ -1083,7 +1083,7 @@ declare namespace H5P {
   function on(
     instance: IH5PInstance,
     eventType: string,
-    handler: (event: Event) => void
+    handler: (event: Event) => void,
   ): void;
 
   /**
@@ -1105,7 +1105,7 @@ declare namespace H5P {
     embedCode: string,
     resizeCode: string,
     size: { width: number; height: number },
-    instance: IH5PInstance
+    instance: IH5PInstance,
   ): undefined | false;
 
   /**
@@ -1116,7 +1116,7 @@ declare namespace H5P {
     contentData: IContentData,
     library: { library: string; params: any; metadata: ILicenseData },
     instance: IH5PInstance,
-    contentId: number | string
+    contentId: number | string,
   ): void;
 
   /**
@@ -1131,7 +1131,7 @@ declare namespace H5P {
     $element: JQuery,
     instance: IH5PInstance,
     exitCallback: () => void,
-    body: JQuery
+    body: JQuery,
   ): void;
 
   /**
@@ -1160,7 +1160,7 @@ declare namespace H5P {
     contentId: number | string,
     score: number,
     maxScore: number,
-    time?: number
+    time?: number,
   ): void;
 
   /**
@@ -1174,7 +1174,7 @@ declare namespace H5P {
   function setSource(
     element: Element,
     source: { path: string },
-    contentId: string | number
+    contentId: string | number,
   ): void;
 
   /**
@@ -1208,7 +1208,7 @@ declare namespace H5P {
       deleteOnChange?: boolean;
       errorCallback?: (error: any) => void;
       async?: boolean;
-    }
+    },
   ): void;
 
   /**
@@ -1236,7 +1236,7 @@ declare namespace H5P {
   function t(
     key: string,
     vars?: { [placeholder: string]: string },
-    ns?: string
+    ns?: string,
   ): string;
 
   /**
@@ -1255,7 +1255,7 @@ declare namespace H5P {
     instance: IH5PInstance,
     eventType: string,
     data?: any,
-    extras?: { bubbles?: boolean; external?: boolean }
+    extras?: { bubbles?: boolean; external?: boolean },
   ): void;
 
   /**

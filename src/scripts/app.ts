@@ -1,28 +1,24 @@
-export default class TextSequencing extends H5P.EventDispatcher {
-  /**
-   * @constructor
-   *
-   * @param {object} params Parameters passed by the editor.
-   * @param {number} contentId Content's id.
-   * @param {object} [extras] Saved state, metadata, etc.
-   */
-  constructor(params: any, contentId: number) {
-    super();
-    const username: string =
-      (H5PIntegration && H5PIntegration.user && H5PIntegration.user.name) ||
-      "world";
-    this.element = document.createElement("div");
-    this.element.innerText = params.textField.replace("%username", username);
-    this.element.innerText = params.textField;
+/* eslint-disable func-names */
+export {};
 
-    /**
-     * Attach library to wrapper.
-     *
-     * @param {jQuery} $wrapper Content's container.
-     */
-    this.attach = ($wrapper: JQuery) => {
-      $wrapper.get(0)?.classList.add("h5p-hello-world");
-      $wrapper.get(0)?.appendChild(this.element);
-    };
-  }
-}
+H5P.TextSequencing = (function (
+  EventDispatcher: H5P.EventDispatcher,
+  $: JQuery,
+) {
+  /**
+   * TextSequencing - Constructor
+   *
+   * @extends H5P.EventDispatcher
+   * @param {Object} params            from semantics.json
+   * @param {number} contentId         unique id given by the platform
+   *
+   */
+  const TextSequencing = (params: any, contentId: number) => {
+    let isRetry = false;
+    let isRefresh = false;
+    let isShowSolution = false;
+    let isGamePaused = false;
+    let isAttempted = false;
+    let score = 0;
+  };
+})(H5P.EventDispatcher, H5P.jQuery);
