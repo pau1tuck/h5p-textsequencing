@@ -1,2 +1,2 @@
-declare var H5P: any;
+declare namespace H5P {}
 declare var H5PIntegration: any;

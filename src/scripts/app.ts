@@ -1,10 +1,7 @@
 /* eslint-disable func-names */
 export {};
 
-H5P.TextSequencing = (function (
-  EventDispatcher: H5P.EventDispatcher,
-  $: JQuery,
-) {
+H5P.TextSequencing = (function (EventDispatcher: any, $: JQuery) {
   /**
    * TextSequencing - Constructor
    *
@@ -13,12 +10,15 @@ H5P.TextSequencing = (function (
    * @param {number} contentId         unique id given by the platform
    *
    */
-  const TextSequencing = (params: any, contentId: number) => {
-    let isRetry = false;
-    let isRefresh = false;
-    let isShowSolution = false;
-    let isGamePaused = false;
-    let isAttempted = false;
-    let score = 0;
+  const textSequencing = (params: any, contentId: number) => {
+    /**
+     * Attach this game's html to the given container.
+     *
+     *  @param {H5P.jQuery} $container
+     */
+    this.attach = ($container: JQuery) => {
+      $container.get(0)?.append("<p>Anus</>");
+    };
   };
+  return textSequencing;
 })(H5P.EventDispatcher, H5P.jQuery);
