@@ -1,4 +1,4 @@
-export default class HelloWorld extends H5P.EventDispatcher {
+export default class TextSequencing extends H5P.EventDispatcher {
   /**
    * @constructor
    *
@@ -6,13 +6,14 @@ export default class HelloWorld extends H5P.EventDispatcher {
    * @param {number} contentId Content's id.
    * @param {object} [extras] Saved state, metadata, etc.
    */
-  constructor(params: any, contentId: number, extras = {}) {
+  constructor(params: any, contentId: number) {
     super();
     const username: string =
       (H5PIntegration && H5PIntegration.user && H5PIntegration.user.name) ||
       "world";
     this.element = document.createElement("div");
     this.element.innerText = params.textField.replace("%username", username);
+    this.element.innerText = params.textField;
 
     /**
      * Attach library to wrapper.
