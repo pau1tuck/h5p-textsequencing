@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Title",
+    "importance": "high",
+    "name": "textField",
+    "type": "text",
+    "widget": "textarea",
+    "placeholder": "Page title",
+    "default": "New Page",
+    "description": "The title of the page"
+  },
+  {
+    "label": "Greeting text",
+    "name": "greeting",
+    "type": "text",
+    "default": "Hello world!",
+    "description": "The greeting text displayed to the end user."
+  },
+  {
+    "label": "Card Image",
+    "name": "image",
+    "type": "image",
+    "optional": true,
+    "description": "Image shown on card, optional. Without this the card will show just the text."
+  }
+]

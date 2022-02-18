@@ -1,0 +1,21 @@
+{
+  "title": "Page",
+  "description": "A single page that can display various content types",
+  "machineName": "H5P.Page",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 1,
+  "runnable": 1,
+  "author": "Paul Tuck @pau1tuck",
+  "license": "MIT",
+  "embedTypes": ["div", "iframe"],
+  "coreApi": {
+    "majorVersion": 1,
+    "minorVersion": 0
+  },
+  "preloadedJs": [
+    {
+      "path": "dist/h5p-page.js"
+    }
+  ]
+}

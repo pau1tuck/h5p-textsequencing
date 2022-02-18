@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noEmit": true,
+        "sourceMap": true,
+        "strict": true,
+        "removeComments": false,
+        "skipLibCheck": true,
+        "allowJs": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "noImplicitAny": true,
+        "noImplicitThis": false,
+        "strictNullChecks": true,
+    },
+    "include": [
+        "**/*.ts",
+        "**/*.js",
+        ".eslintrc.js",
+    ],
+    "exclude": [
+        "node_modules",
+        "bkp.ts",
+    ],
+    "typeRoots": [
+        "node_modules/@types",
+        "node_modules/@h5p-types"
+    ],
+}

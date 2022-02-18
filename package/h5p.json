@@ -1,0 +1,23 @@
+{
+  "title": "Page",
+  "language": "en",
+  "author": "Paul Tuck @pau1tuck",
+  "license": "CC BY-SA",
+  "licenseVersion": "4.0",
+  "authors": [
+    {
+      "name": "The author name",
+      "role": "Author"
+    }
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.Page",
+      "majorVersion": 1,
+      "minorVersion": 0
+    }
+  ],
+  "mainLibrary": "H5P.Page",
+  "machineName": "H5P.Page",
+  "embedTypes": ["div"]
+}
