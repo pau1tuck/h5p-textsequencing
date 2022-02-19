@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable func-names */
-H5P.TextSequencing = ((EventDispatcher: any, $: any, UI: any) => {
+H5P.TextSequencing = ((EventDispatcher: any, $: JQuery, UI: any) => {
   /**
    * Text Sequencing Constructor
 
