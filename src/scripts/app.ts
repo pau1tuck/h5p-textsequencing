@@ -1,18 +1,20 @@
-H5P.DragText = (($: any, Question: any, ConfirmationDialog: any) => {
+/* eslint-disable no-console */
+H5P.TextSequencing = (($: any, Question: any, ConfirmationDialog: any) => {
   /**
    * Initialize module.
    *
-   * @class H5P.DragText
+   * @class H5P.TextSequencing
    * @extends H5P.Question
-   * @param {Object} _params Behavior settings
-   * @param {Number} contentId Content identification
-   * @param {Object} contentData Object containing task specific content data
+   * @param {Object} params // Behavior settings
+   * @param {Number} contentId // Content identification
+   * @param {Object} contentData // Object containing task-specific content data
    *
-   * @returns {Object} DragText Drag Text instance
+   * @returns {Object} TextSequencing instance
    */
   const TextSequencing = (params: any, contentId: number, contentData: any) => {
     // Set default behavior.
-    params = $.extend(
+    $ = $(this);
+    params = Object.assign(
       true,
       {
         media: {},
@@ -21,7 +23,11 @@ H5P.DragText = (($: any, Question: any, ConfirmationDialog: any) => {
       params,
     );
   };
+
+  TextSequencing.prototype = Object.create(Question.prototype);
+  console.log(TextSequencing.prototype.params);
+
   return TextSequencing;
 })(H5P.jQuery, H5P.Question, H5P.ConfirmationDialog);
 
-export default {};
+export default H5P.TextSequencing;
