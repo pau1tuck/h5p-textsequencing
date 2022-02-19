@@ -26,6 +26,7 @@ module.exports = {
     "max-classes-per-file": [1],
     "no-console": ["error", { allow: ["warn", "error"] }],
     "no-extra-boolean-cast": "off",
+    "no-param-reassign": [0],
     "no-restricted-globals": [2, "event"],
     "react/prop-types": 0,
     semi: [2, "always"],

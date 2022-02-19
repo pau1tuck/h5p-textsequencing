@@ -1,50 +1,27 @@
-/* eslint-disable no-console */
-/* eslint-disable func-names */
-H5P.TextSequencing = ((EventDispatcher: any, $: JQuery, UI: any) => {
+H5P.DragText = (($: any, Question: any, ConfirmationDialog: any) => {
   /**
-   * Text Sequencing Constructor
-
-   * @class H5P.TextSequencing
-   * @extends H5P.EventDispatcher
-   * @param {Object} params // parameters from semantics.json
-   * @param {Number} id     // unique ID given by the platform
-   */
-  const TextSequencing = (params: any, id: number) => {
-    /** @alias H5P.TextSequencing */
-
-    // Initialize event inheritance
-    EventDispatcher.call(this);
-
-    // Extend defaults with provided options
-    // Add defaults
-    // eslint-disable-next-line no-param-reassign
-    params = Object.assign(params, true, {
-      l10n: {
-        cardTurns: "Card turns",
-        timeSpent: "Time spent",
-        feedback: "Good work!",
-        tryAgain: "Reset",
-        closeLabel: "Close",
-        label: "Memory Game. Find the matching cards.",
-        done: "All of the cards have been found.",
-        cardPrefix: "Card %num: ",
-        cardUnturned: "Unturned.",
-        cardMatched: "Match found.",
-      },
-    });
-    console.log(params);
-  };
-
-  /**
-   * Attach main content to the H5P container
+   * Initialize module.
    *
-   *  @param {H5P.jQuery} $container
+   * @class H5P.DragText
+   * @extends H5P.Question
+   * @param {Object} _params Behavior settings
+   * @param {Number} contentId Content identification
+   * @param {Object} contentData Object containing task specific content data
+   *
+   * @returns {Object} DragText Drag Text instance
    */
-  TextSequencing.prototype.attach = ($container: JQuery): void => {
-    $container.append("<p>Anus</p>");
+  const TextSequencing = (params: any, contentId: number, contentData: any) => {
+    // Set default behavior.
+    params = $.extend(
+      true,
+      {
+        media: {},
+        taskDescription: "Set in adjectives in the following sentence",
+      },
+      params,
+    );
   };
-
   return TextSequencing;
-})(H5P.EventDispatcher, H5P.jQuery, H5P.JoubelUI);
+})(H5P.jQuery, H5P.Question, H5P.ConfirmationDialog);
 
 export default {};
